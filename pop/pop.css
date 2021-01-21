@@ -29,6 +29,10 @@ h1{
     margin: auto;
 }
 
+#video{
+    margin-left: 7%;
+}
+
 .ligne{
     border-top: 1px solid #3D3D3D;
     width: 100%;
@@ -41,7 +45,7 @@ h1{
     flex-direction: column;
 }
 
-.songs{
+.songs, #top{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -60,4 +64,17 @@ h1{
 
 .title{
     margin-right: 25%;
+}
+
+button.play{
+    background-color: #1DAFDA;
+    color: white;
+    border: none;
+    border-radius: 5px 5px;
+    padding: 3px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
 }

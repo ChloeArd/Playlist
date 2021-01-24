@@ -44,7 +44,6 @@ h1{
 
 .playlists{
     color: white;
-    text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,4 +79,58 @@ h1{
     font-size: 50px;
     width: 100%;
     margin-bottom: 20px;
+}
+
+.ligne{
+    border-top: 1px solid #3D3D3D;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#containerSongs{
+    display: flex;
+    flex-direction: column;
+}
+
+.songs, #top{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#imagePop{
+    width: 300px;
+    float: left;
+}
+
+.title, .link, .artist, .play{
+    font-size: 15px;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.title{
+    margin-right: 25%;
+}
+
+button.play{
+    background-color: #1DAFDA;
+    color: white;
+    border: none;
+    border-radius: 5px 5px;
+    padding: 3px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+#video{
+    margin: auto;
+    width: 50%;
+}
+iframe{
+    width: 100%;
 }

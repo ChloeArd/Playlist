@@ -15,16 +15,22 @@ $("#enter1").click(function () {
     containerMusics.append(
         "<div class='playlists'>" +
             "<img class='imageProj' src='"+ urlImage +"'>" +
-            "<button class='playPlaylist' id='playlist" + index + "'>" + namePlaylist + "</button></div>"
+            "<button class='playPlaylist' id='playlist" + index + "'>" + namePlaylist + "</button>" +
+        "<button id='ajoutPlaylist" + index + "'>+</button></div>"
     );
     setTimeout(function () {
         $("#containerCreatePlaylist").css("display", "none");
     }, 1000)
 
-    $("#playlist" + index).click(function () {
-        let title = prompt("Titre de t'as musique ?");
-        let artist = prompt("Nom de ton artiste ?");
-        let urlLink = prompt("Lien YouTube de t'as musique");
+    $("#ajoutPlaylist" + index).click(function () {
+        $("#containerCreateMusics").css("display", "flex");
+    })
+
+    $("#enter2").click(function () {
+        let title = $("#title").val();
+        let artist = $("#artist").val();
+        let urlLink = $("#linkYtb").val();
+        let videoLink =  $("#integrationVideo").val()
 
         containerSongs.append(
             "<div class=\"ligne\"></div>" +
@@ -38,9 +44,18 @@ $("#enter1").click(function () {
         $("#link" + index).attr("href", urlLink);
 
         $("#play" + index).click(function (){
-            let videoLink = prompt("Copie le code d'intégration de la video (clique droit sur la video) sur YouTube '<iframe></iframe>'  ?");
-            containerVideos.append(videoLink);
+            if(nbClick < 1){
+                containerVideos.append(videoLink);
+                nbClick++;
+            }
+            else {
+                containerVideos.detach(videoLink);
+                nbClick = 0;
+            }
         })
+        setTimeout(function () {
+            $("#containerCreateMusics").css("display", "none");
+        }, 1000)
     });
 });
 

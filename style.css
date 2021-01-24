@@ -78,7 +78,29 @@ h1{
     background-color: orange;
     font-size: 50px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#containerCreatePlaylist{
+    background-color: white;
+    flex-direction: column;
+    width: 70%;
+    color: black;
+    padding: 10px 250px;
+    font-size: 15px;
+    display: none;
+}
+
+input{
+    margin-bottom: 15px;
+}
+
+button{
+    margin: auto;
+    background-color: #7948AA;
+    color: white;
+    border-radius: 5px 5px;
+    font-size: 20px;
 }
 
 .ligne{

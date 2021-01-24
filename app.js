@@ -5,14 +5,22 @@ let index = 0;
 let nbClick = 0;
 
 $("#createPlaylist").click(function () {
-    let namePlaylist = prompt("Nom de t'as playlist ?");
-    let urlImage = prompt("Insère un lien d'une image");
+    $("#containerCreatePlaylist").css("display", "flex");
+})
+
+$("#enter1").click(function () {
+    let namePlaylist = $("#name").val();
+    let urlImage = $("#urlImage").val();
     index++;
     containerMusics.append(
         "<div class='playlists'>" +
             "<img class='imageProj' src='"+ urlImage +"'>" +
             "<button class='playPlaylist' id='playlist" + index + "'>" + namePlaylist + "</button></div>"
     );
+    setTimeout(function () {
+        $("#containerCreatePlaylist").css("display", "none");
+    }, 1000)
+
     $("#playlist" + index).click(function () {
         let title = prompt("Titre de t'as musique ?");
         let artist = prompt("Nom de ton artiste ?");

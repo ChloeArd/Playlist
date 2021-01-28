@@ -46,10 +46,11 @@ $("#enter1").click(function () {
         $("#play" + index).click(function (){
             if(nbClick < 1){
                 containerVideos.append(videoLink);
+                containerVideos.css("display", "block");
                 nbClick++;
             }
             else {
-                containerVideos.detach(videoLink);
+                containerVideos.css("display", "none");
                 nbClick = 0;
             }
         })
@@ -58,4 +59,3 @@ $("#enter1").click(function () {
         }, 1000)
     });
 });
-

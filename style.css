@@ -86,21 +86,28 @@ h1{
     flex-direction: column;
     width: 70%;
     color: black;
-    padding: 10px 250px;
+    padding: 10px ;
     font-size: 15px;
     display: none;
 }
 
 input{
     margin-bottom: 15px;
+    padding: 5px;
 }
 
 button{
     margin: auto;
-    background-color: #7948AA;
+    background-color: #445BE7;
     color: white;
     border-radius: 5px 5px;
-    font-size: 20px;
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+}
+
+label{
+    margin-bottom: 10px;
 }
 
 .ligne{
@@ -128,12 +135,8 @@ button{
 
 .title, .link, .artist, .play{
     font-size: 15px;
-    margin-left: 7%;
-    margin-right: 7%;
-}
-
-.title{
-    margin-right: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 button.play{
@@ -155,4 +158,11 @@ a{
 }
 iframe{
     width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    #concert{
+        display: none;
+    }
+
 }
